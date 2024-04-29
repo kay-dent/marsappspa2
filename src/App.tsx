@@ -1,12 +1,13 @@
 import React from 'react';
 import landingBody from './landingBody';
 import './App.css';
+import LandingBody from './landingBody';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        ${landingBody()};
+        <LandingBody />
         <a
           className="App-link"
           href="https://reactjs.org"

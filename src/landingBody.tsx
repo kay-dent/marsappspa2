@@ -1,4 +1,4 @@
-export default function landingBody() {
+export default function LandingBody() {
     return (
       <div>
         <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" className="App-logo" alt="logo" />
