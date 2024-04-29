@@ -1,8 +1,7 @@
 import React from 'react';
-import landingBody from './ContentSection';
 import './App.css';
 import ContentSection from './ContentSection';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   return (
@@ -21,11 +20,17 @@ function App() {
 }  
 
 function Counter() {
-  const [count, setCount] = useState(0)
+
+  const [count, setCount] = useState(Number(localStorage.getItem("count")) || 0)
+
+  useEffect(() => {
+    localStorage.setItem("count", `${count}`)
+  })
 
   function handleClick() {
     setCount(count + 1)
   }
+
   return (
     <button onClick={handleClick}>
       {count}
