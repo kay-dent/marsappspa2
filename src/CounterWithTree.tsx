@@ -1,5 +1,6 @@
 import './CounterWithTree.css'
-import{ useEffect, useState } from 'react';
+import{ useEffect, useState, useContext } from 'react';
+import { CountContext } from './CountContext';
 
 export default function CounterWithTree() {
 
@@ -16,8 +17,10 @@ export default function CounterWithTree() {
 
     return (
         <div>
+            <CountContext.Provider value={count}>
             <Button handleClick={handleClick}/>
-            <Message count={count}/>
+            <Message />
+            </CountContext.Provider>
         </div>
         
     )
@@ -32,20 +35,19 @@ function Button({ handleClick }: {
     )
 }
 
-function Message({count} : {
-    count: number
-}) {
+function Message() {
+
+    
 
     return (
         <div>
-            <p>You have clicked the yellow button: <CounterValue count={count}/> times</p>
+            <p>You have clicked the yellow button: <CounterValue /> times</p>
         </div>
     )
 }
 
-function CounterValue({count} : {
-    count: number
-}) {
+function CounterValue() {
+    const count = useContext(CountContext);
     return (
         <span>{count}</span>
     )
