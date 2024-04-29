@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import landingBody from './landingBody';
 import './App.css';
 
 function App() {
@@ -18,19 +18,6 @@ function App() {
       </header>
     </div>
   );
-}
-
-function landingBody() {
-  return (
-    <div>
-      <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" className="App-logo" alt="logo" />
-      <div>
-        <h1>NASA</h1>
-        <p>Nasa is a space agency in the US.</p>
-        <p>Nasa's satellites provide data about Earth.</p>
-      </div>
-    </div>
-  )
 }  
   
 export default App;
