@@ -1,6 +1,7 @@
 import './CounterWithTree.css'
 import{ useEffect, useState, useContext } from 'react';
 import { CountContext } from './CountContext';
+import { HandleClickContext } from './HandleClickContext';
 
 export default function CounterWithTree() {
 
@@ -18,17 +19,19 @@ export default function CounterWithTree() {
     return (
         <div>
             <CountContext.Provider value={count}>
-            <Button handleClick={handleClick}/>
-            <Message />
+            <HandleClickContext.Provider value={handleClick}>
+              <Button />
+              <Message />
+            </HandleClickContext.Provider>
             </CountContext.Provider>
         </div>
         
     )
 }
 
-function Button({ handleClick }: {
-    handleClick: React.MouseEventHandler
-}) {
+function Button() {
+
+    const handleClick = useContext(HandleClickContext);
 
     return (
         <button className={"button-two"} onClick={handleClick}></button>
