@@ -1,13 +1,18 @@
 import React from 'react';
-import landingBody from './landingBody';
+import landingBody from './ContentSection';
 import './App.css';
-import LandingBody from './landingBody';
+import ContentSection from './ContentSection';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <LandingBody />
+        <ContentSection 
+          imageSource={"https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg"}
+          header={"NASA"}
+          paragraphOne={"Nasa is a space agency in the US."}
+          paragraphTwo={"Nasa's satellites provide data about Earth."}        
+        />
         <a
           className="App-link"
           href="https://reactjs.org"
