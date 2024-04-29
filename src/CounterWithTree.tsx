@@ -40,8 +40,6 @@ function Button() {
 
 function Message() {
 
-    
-
     return (
         <div>
             <p>You have clicked the yellow button: <CounterValue /> times</p>
