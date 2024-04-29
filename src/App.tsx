@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import ContentSection from './ContentSection';
 import { useEffect, useState } from 'react';
+import CounterWithTree from './CounterWithTree';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
           paragraphTwo={"Nasa's satellites provide data about Earth."}        
         />
         <Counter />
+
+        <CounterWithTree/>
       </header>
     </div>
   );
@@ -37,5 +40,7 @@ function Counter() {
     </button>
   )
 }
+
+
   
 export default App;
